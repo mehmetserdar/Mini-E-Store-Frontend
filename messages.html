@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="" content="" />
+    <meta name="" content="" />
+    <meta name="" content="" />
+    <link rel="icon" href="content/img/favicon.ico">
+    <title>Mesajlarım</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&
+    display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <!-- nav start -->
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"> <img src="content/img/favicon.ico" alt=""> Minimal E-Commerce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"> <i
+                                    class="fas fa-home    "></i>
+                                Anasayfa</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="diller" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe-africa    "></i> Diller
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="diller">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#yardim"> <i
+                                    class="fas fa-question-circle    "></i>
+                                Yardım</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Ürün Ara" aria-label="Search">
+                            <button class="btn btn-outline-danger" type="submit">Ara</button>
+                        </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="girislink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-alt    "></i> Üye</a>
+                            <ul class="dropdown-menu" aria-labelledby="girislink">
+                                <li><a class="dropdown-item" href="#" id="btn_giris" data-bs-toggle="modal"
+                                        data-bs-target="#myUye"><i class="fas fa-sign-in-alt"></i> Giriş</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" id="btn_kayit" data-bs-toggle="modal"
+                                        data-bs-target="#myKayit"><i class="fas fa-user-plus"></i> Kayıt Ol</a>
+                                </li>
+                            </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="sepetim" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" id>
+                                <i class="fas fa-shopping-basket    "></i> Sepet <span class="badge blue">4</span></a>
+                            <ul class="dropdown-menu" aria-labelledby="sepetim" id="sepet_id">
+                                <!-- div.container>div.row>div.col-md-4+div.col.md-8 -->
+                                <li>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-4">Resim</div>
+                                            <div class="col md-8">Yazı</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a class="ms-4 mt-2 btn btn-sm btn-primary" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#mySepet">Sepeti Göster</a></li>
+                                <li><a class="dropdown-item" href="#">Ürün 1</a></li>
+                                <li><a class="dropdown-item" href="#">Ürün 2</a></li>
+                                <li><a class="dropdown-item" href="#">Ürün 3</a></li>
+                                <li><a class="dropdown-item" href="#">Ürün 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle me-5" href="#" id="hesabim" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-cog    "></i> </i> Bilgilerim </a>
+                            <ul class="dropdown-menu" aria-labelledby="hesabim">
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#"> <i class="fas fa-user-alt"></i> Profilim</a></li>
+                                <li><a class="dropdown-item" href="ordered.html"> <i class="fas fa-barcode"></i>
+                                        Siparişlerim </a></li>
+                                <li><a class="dropdown-item" href="basket.html"> <i class="fas fa-shopping-basket"></i>
+                                        Sepetim </a></li>
+                                <li><a class="dropdown-item" href="coupons.html"> <i class="fas fa-file-alt"></i>
+                                        Kuponlarım</a></li>
+                                <li><a class="dropdown-item" href="address.html"> <i class="far fa-map"></i> Adreslerim
+                                    </a></li>
+                                <li><a class="dropdown-item" href="messages.html"><i class="fas fa-envelope"></i>
+                                        Mesajlarım<span class="badge red">3</span></a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#myParolaHatirla"><i class="fas fa-key"></i> Parolamı
+                                        Unuttum</a></li>
+                                <li><a class="dropdown-item" href="#"> <i class="fas fa-door-open"></i> Çıkış</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <!-- nav end -->
+    </header>
+    <!-- header end -->
+    <main>
+
+
+        <section>
+            <!-- div.container>div.row>div.col-md-12 -->
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <nav class="breadcrumb mt-5">
+                                <a class="breadcrumb-item" href="index.html">Anasayfa</a>
+                                <a class="breadcrumb-item" href="#">Mesajlarım</a>
+                                <span class="breadcrumb-item active">Detay</span>
+                            </nav>
+                            <div class="col-md-12 text-center">Mesajlarım</div>
+
+                            <table class="table table-sm table-striped table-hover text-center table-dark">
+                                <caption>Mesajlarım</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Mesaj Başlığı</th>
+                                        <th>Mesaj İçeriği</th>
+                                        <th>Tarih</th>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Lorem ipsum.</td>
+                                        <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat,
+                                            blanditiis?</td>
+                                        <td>12-12-2021</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#msgView" href="#">
+                                                <i class="fas fa-eye    "></i> </button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#msgDelete" href="#">
+                                                <i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum.</td>
+                                        <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat,
+                                            blanditiis?</td>
+                                        <td>12-12-2021</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#msgView" href="#">
+                                                <i class="fas fa-eye    "></i> </button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#msgDelete" href="#">
+                                                <i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum.</td>
+                                        <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat,
+                                            blanditiis?</td>
+                                        <td>12-12-2021</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#msgView" href="#">
+                                                <i class="fas fa-eye    "></i> </button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#msgDelete" href="#">
+                                                <i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    <a href="#" class="btn btn-primary" id="backTopBtn"> <i class="fas fa-arrow-alt-circle-up    "></i> Yukarı Git</a>
+</main>
+
+
+    <!-- footer start -->
+    <footer id="footer" class="text-white bg-dark">
+        <div class="container">
+            <div class="row">
+                <!-- sol taraf -->
+                <div class="col-md-4 text-start mt-5">
+                    <h5 class="text-muted me-4">Adres</h5>
+                    <address> <i class="fas fa-map-marked    "></i> Adres: Lorem, ipsum dolor sit amet consectetur
+                        adipisicing. <br>
+                        <i class="fas fa-mail-bulk    "></i> E-Posta: <a href="mailto:info@deneme123.com">
+                            info@deneme123.com</a> <br>
+                        <i class="fas fa-phone    "></i> Telefon: <a href="tel:+908508505050"> 0 850 850 50 50</a>
+                    </address>
+                    <address>
+                        <div class="col w-100 clearfix">
+                            <div class="mapouter clearfix">
+                                <div class="gmap_canvas">
+                                    <iframe width="100%" height="300" id="gmap_canvas"
+                                        src="https://maps.google.com/maps?q=istanbul%20&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                    <a href="https://yt2.org">youtube to mp3</a><br>
+                                    <style>
+                                        .mapouter {
+                                            position: relative;
+                                            text-align: right;
+                                            height: 300px;
+                                            width: 100%;
+                                        }
+                                    </style>
+                                    <a href="https://www.embedgooglemap.net">embedded google search</a>
+                                    <style>
+                                        .gmap_canvas {
+                                            overflow: hidden;
+                                            background: none !important;
+                                            height: 300px;
+                                            width: 100%;
+                                        }
+                                    </style>
+                                </div>
+                            </div>
+                        </div>
+                    </address>
+                </div>
+                <!-- orta taraf -->
+                <div class="col-md-4 text-start mt-5">
+                    <h5 class="text-muted me-4">Blog</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam odit dolorem modi labore? Dolor,
+                        esse. Lorem ipsum dolor, sit amet consectetur adipisicing. </p>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                </div>
+                <!-- sağ taraf -->
+                <div class="col-md-4 text-start mt-5">
+                    <h5 class="text-muted  me-4">İletişim</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta neque atque dolores doloremque
+                        expedita suscipit.</p>
+                    <form action="#">
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label class="form-label">Ad</label>
+                                <input type="text" name="firstName" class="form-control" placeholder="Adınız"
+                                    aria-label="First name" required>
+                            </div>
+                            <div class="col">
+                                <label class="form-label">Soyad</label>
+                                <input type="text" name="lastName" class="form-control" placeholder="Soyadınız"
+                                    aria-label="Last name" required>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label class="form-label">Eposta</label>
+                                <input type="email" name="email" class="form-control" placeholder="E-postanız"
+                                    aria-label="Email" required>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label class="form-label">Konu</label>
+                                <input type="text" name="subject" class="form-control" placeholder="Konu"
+                                    aria-label="Subject" required>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label class="form-label">Mesaj</label>
+                                <textarea type="text" name="message" class="form-control" placeholder="Mesajınız"
+                                    aria-label="Message" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success mt-2">Gönder</button>
+                        <button type="reset" class="btn btn-danger mt-2">Temizle</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md m-2 text-center text-muted">
+                    <a href="" class="btn btn-sm btn-primary"> <i class="fab fa-facebook    "></i> Facebook </a>
+                    <a href="" class="btn btn-sm  btn-info text-white"> <i class="fab fa-twitter    "></i> Twitter </a>
+                    <a href="" class="btn btn-sm  btn-danger"> <i class="fab fa-instagram    "></i> Instagram </a>
+                    <a href="" class="btn btn-sm  btn-primary"> <i class="fab fa-linkedin    "></i> Linkedin </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md m-2 text-center text-muted"> <small>2021 &copy; Bütün hakları saklıdır.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Magaza Start -->
+    <!-- div.modal>div.modal-dialog>div.modal-content>(div.modal-header>h5.modal-title+button.btn)+div.modal-body -->
+    <div class="modal fade" id="orderStore" role="dialog">
+        <div class="modal-dialog modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mağaza Bilgileri</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 mt-1"><img src="https://via.placeholder.com/60?text=MAGAZA+LOGO"
+                                    class="rounded-circle img-fluid" alt="">
+                            </div>
+                            <div class="col-md-7">
+                                <ul class="list-group">
+                                    <li class="list-group">Lorem ipsum dolor sit amet.</li>
+                                    <li class="list-group">Lorem ipsum dolor sit.</li>
+                                    <li class="list-group">Lorem ipsum dolor sit amet consectetur.</li>
+                                    <li class="list-group">Lorem ipsum dolor sit.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- view Start -->
+    <!-- div.modal>div.modal-dialog>div.modal-content>(div.modal-header>h5.modal-title+button.btn)+div.modal-body -->
+    <div class="modal fade" id="msgView" role="dialog">
+        <div class="modal-dialog modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mesajınız</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-group">
+                                    <li class="list-group">Lorem ipsum dolor sit amet.</li>
+                                    <li class="list-group">Lorem ipsum dolor sit.</li>
+                                    <li class="list-group">Lorem ipsum dolor sit amet consectetur.</li>
+                                    <li class="list-group">Lorem ipsum dolor sit.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- view End -->
+    <!-- sil Start -->
+    <!-- div.modal>div.modal-dialog>div.modal-content>(div.modal-header>h5.modal-title+button.btn)+div.modal-body -->
+    <div class="modal fade" id="msgDelete" role="dialog">
+        <div class="modal-dialog modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mesajı Sil</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 mt-1"><span class="fa fa-trash rounded-circle img-fluid"
+                                    style="font-size: 3rem; color:#dc3545"></span>
+                            </div>
+                            <div class="col-md-7">
+                                <h5 class="text-danger">Silmek istediğinize emin misiniz?</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-1">
+                    <button type="submit" class="btn btn-danger" data-bs-dismiss="modal"> <i
+                            class="fas fa-trash-alt    "></i> Sil </button>
+                    <button type="reset" class="btn btn-dark" data-bs-dismiss="modal"> <i
+                            class="fas fa-times-circle    "></i> </i> İptal Et</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sil End -->
+    <!-- Sepet Start -->
+    <!-- div.modal>div.modal-dialog>div.modal-content>(div.modal-header>h5.modal-title+button.btn)+div.modal-body -->
+    <div class="modal fade" id="mySepet" role="dialog">
+        <div class="modal-dialog modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sepet</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 mt-1"><img src="https://via.placeholder.com/60?text=ÜRÜN"
+                                    class="rounded-circle img-fluid" alt="">
+                            </div>
+                            <div class="col-md-7">
+                                <p class="mt-2 line-clamp-2 fw-lighter">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Hic, quas.</p>
+                            </div>
+                            <div class="col-md-2">
+                                <p class="mt-2 line-clamp-2 fw-bold">FİYAT₺</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-1">
+                    <button type="reset" class="btn btn-danger"> <i class="fas fa-trash-alt    "></i> Sepeti
+                        Boşalt</button>
+                    <button type="submit" class="btn btn-success"> <i class="fas fa-wallet    "></i> </i> Ödeme Adımına
+                        Geç</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sepet End -->
+    <!-- JS -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+        </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+        integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+</body>
+
+</html>

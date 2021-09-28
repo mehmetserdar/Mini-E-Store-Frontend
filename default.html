@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="" content="" />
+    <meta name="" content="" />
+    <meta name="" content="" />
+    <link rel="icon" href="content/img/favicon.ico">
+    <title>Minimal E-Commerce</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&
+    display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <!-- nav start -->
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"> <img src="content/img/favicon.ico" alt=""> Minimal E-Commerce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"> <i class="fas fa-home    "></i>
+                                Anasayfa</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="diller" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe-africa    "></i> Diller
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="diller">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#yardim"> <i
+                                    class="fas fa-question-circle    "></i>
+                                Yardım</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Ürün Ara" aria-label="Search">
+                            <button class="btn btn-outline-danger" type="submit">Ara</button>
+                        </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="girislink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-alt    "></i> Üye</a>
+                            <ul class="dropdown-menu" aria-labelledby="girislink">
+                                <li><a class="dropdown-item" href="#" id="btn_giris" data-bs-toggle="modal"
+                                        data-bs-target="#myUye"><i class="fas fa-sign-in-alt"></i> Giriş</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" id="btn_kayit" data-bs-toggle="modal"
+                                        data-bs-target="#myKayit"><i class="fas fa-user-plus"></i> Kayıt Ol</a>
+                                </li>
+                            </ul>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="sepetim" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" id>
+                                    <i class="fas fa-shopping-basket    "></i> Sepet <span class="badge blue">4</span></a>
+                                <ul class="dropdown-menu" aria-labelledby="sepetim" id="sepet_id">
+                                    <!-- div.container>div.row>div.col-md-4+div.col.md-8 -->
+                                    <li><div class="container">
+                                        <div class="row">
+                                            <div class="col-md-4">Resim</div>
+                                            <div class="col md-8">Yazı</div>
+                                        </div>
+                                    </div></li>
+                                    <li><a class="ms-4 mt-2 btn btn-sm btn-primary" href="basket.html" data-bs-toggle="modal"
+                                        data-bs-target="#mySepet">Sepeti Göster</a></li>
+                                    <li><a class="dropdown-item" href="#">Ürün 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Ürün 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Ürün 3</a></li>
+                                    <li><a class="dropdown-item" href="#">Ürün 4</a></li>
+                            </ul>    
+                        </li>       
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle me-5" href="#" id="hesabim" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user-cog    "></i>    </i> Bilgilerim </a>
+                                <ul class="dropdown-menu" aria-labelledby="hesabim">
+                                    <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#"> <i class="fas fa-user-alt   "></i> Profilim</a></li>
+                                <li><a class="dropdown-item" href="basket.html"> <i class="fas fa-shopping-basket"></i> Sepetim </a></li>
+                                <li><a class="dropdown-item" href="ordered.html"> <i class="fas fa-barcode    "></i> Siparişlerim </a></li>
+                                <li><a class="dropdown-item" href="coupons.html"> <i class="fas fa-file-alt"></i> Kuponlarım</a></li>
+                                <li><a class="dropdown-item" href="address.html"> <i class="far fa-map    "></i> Adreslerim </a></li>
+                                <li><a class="dropdown-item" href="messages.html"><i class="fas fa-envelope    "></i> Mesajlarım <span class="badge red">3</span></a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#myParolaHatirla"> <i class="fas fa-key    "></i> Parolamı Unuttum</a></li>
+                                <li><a class="dropdown-item" href="#"> <i class="fas fa-door-open    "></i> Çıkış</a></li>
+                            </ul>    
+                        </li>                                             
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <!-- nav end -->
+    </header>
+    <!-- header end -->
+    <!-- main start -->
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/900x500?text=Minimal-eCommerce-Project" class="d-block w-100"
+                        alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/900x500?text=Minimal-eCommerce-Project" class="d-block w-100"
+                        alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/900x500?text=Minimal-eCommerce-Project" class="d-block w-100"
+                        alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <p class="text-muted text-center display-6 p-2 text-uppercase">Ürünler</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3"><a href="">
+                        <div class="card shadow p-1 mb-3 ">
+                            <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                                alt="...">
+                            <div class="card-body bg-light">
+                                <h6 class="card-title text-success fs-6 text-uppercase">İndirim Yüzdesi</h6>
+                                <h4 class="card-title text-success fw-bold">YENİ FİYAT₺</h4>
+                                <h6 class="card-title text-muted"><del>ESKİ FİYAT₺</del></h6>
+                                <p class="card-text text-dark line-clamp-2 pb-1">İndirimli Ürün Adı Lorem ipsum, dolor
+                                    sit amet consectetur adipisicing elit. Iusto labore saepe quibusdam.</p>
+                    </a>
+                    <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">&nbsp;</h6>
+                        <h4 class="card-title fw-bold text-dark">NORMAL FİYAT₺</h4>
+                        <h6 class="card-title text-muted">&nbsp;</h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimsiz Ürün Adı</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">&nbsp;</h6>
+                        <h4 class="card-title fw-bold text-dark">NORMAL FİYAT₺</h4>
+                        <h6 class="card-title text-muted">&nbsp;</h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimsiz Ürün Adı</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">&nbsp;</h6>
+                        <h4 class="card-title text-dark fw-bold text-dark">NORMAL FİYAT₺</h4>
+                        <h6 class="card-title text-muted">&nbsp;</h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimsiz Ürün Adı</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">İndirim Yüzdesi</h6>
+                        <h4 class="card-title text-success fw-bold">YENİ FİYAT₺</h4>
+                        <h6 class="card-title text-dark text-muted"><del>ESKİ FİYAT₺</del></h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimli Ürün Adı</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">İndirim Yüzdesi</h6>
+                        <h4 class="card-title text-success fw-bold">YENİ FİYAT₺</h4>
+                        <h6 class="card-title text-muted"><del>ESKİ FİYAT₺</del></h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimli Ürün Adı</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">&nbsp;</h6>
+                        <h4 class="card-title fw-bold text-dark">NORMAL FİYAT₺</h4>
+                        <h6 class="card-title text-muted">&nbsp;</h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimsiz Ürün Adı</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">&nbsp;</h6>
+                        <h4 class="card-title fw-bold text-dark">NORMAL FİYAT₺</h4>
+                        <h6 class="card-title text-muted">&nbsp;</h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimsiz Ürün Adı</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- Sİzİn İçİn SeçtİklerİMİz -->
+        <p class="text-muted text-center display-6 p-2 text-uppercase">Sİzİn İçİn SeçtİklerİMİz</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3"><a href="">
+                        <div class="card shadow p-1 mb-3 ">
+                            <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                                alt="...">
+                            <div class="card-body bg-light">
+                                <h6 class="card-title text-success fs-6 text-uppercase">İndirim Yüzdesi</h6>
+                                <h4 class="card-title text-success fw-bold">YENİ FİYAT₺</h4>
+                                <h6 class="card-title text-muted"><del>ESKİ FİYAT₺</del></h6>
+                                <p class="card-text text-dark line-clamp-2 pb-1">İndirimli Ürün Adı Lorem ipsum, dolor
+                                    sit amet consectetur adipisicing elit. Iusto labore saepe quibusdam.</p>
+                    </a>
+                    <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3 ">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">İndirim Yüzdesi</h6>
+                        <h4 class="card-title text-success fw-bold">YENİ FİYAT₺</h4>
+                        <h6 class="card-title text-muted"><del>ESKİ FİYAT₺</del></h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimli Ürün Adı Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Iusto labore saepe quibusdam.</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3 ">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">İndirim Yüzdesi</h6>
+                        <h4 class="card-title text-success fw-bold">YENİ FİYAT₺</h4>
+                        <h6 class="card-title text-muted"><del>ESKİ FİYAT₺</del></h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimli Ürün Adı Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Iusto labore saepe quibusdam.</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-3"><a href="">
+                <div class="card shadow p-1 mb-3 ">
+                    <img src="https://www.dropbox.com/s/5xp7sy21sqb6jm4/ImageCap.jpg?raw=1" class="card-img-top"
+                        alt="...">
+                    <div class="card-body bg-light">
+                        <h6 class="card-title text-success fs-6 text-uppercase">İndirim Yüzdesi</h6>
+                        <h4 class="card-title text-success fw-bold">YENİ FİYAT₺</h4>
+                        <h6 class="card-title text-muted"><del>ESKİ FİYAT₺</del></h6>
+                        <p class="card-text text-dark line-clamp-2 pb-1">İndirimli Ürün Adı Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Iusto labore saepe quibusdam.</p>
+            </a>
+            <a href="#" class="btn btn-primary"> <i class="fas fa-shopping-basket    "></i> Sepete Ekle</a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="container">
+            <p class="text-muted text-center display-6 p-2 text-uppercase" id="yardim">Sık Sorulan Sorular</p>
+            <div class="row">
+                <div class="accordion me-5 mb-3" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Sık Sorulan Soru #1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Soruların cevabını yazabilirsiniz.</strong> Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Velit illum molestias iusto deserunt, animi voluptate,
+                                beatae tempora aut, reprehenderit illo error maxime magnam pariatur assumenda enim qui
+                                obcaecati corporis officia.
+                                Earum labore mollitia quidem voluptas quos adipisci officiis nulla ex hic, consequuntur
+                                et maiores molestias atque harum eligendi dolor, nam, laboriosam quisquam libero
+                                voluptate. Amet pariatur ipsum distinctio porro laboriosam?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Sık Sorulan Soru #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Soruların cevabını yazabilirsiniz.</strong> Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Quidem ipsum quae ab, molestiae sed, culpa quam accusamus
+                                debitis totam id dolor accusantium dolores harum vel doloribus, architecto quo
+                                reprehenderit? Optio!
+                                Illum deserunt quis mollitia accusantium quia aut recusandae voluptate! Ad modi
+                                assumenda, vitae nulla tempora nemo odio voluptatem soluta? Mollitia natus sit nam odit.
+                                Eaque repudiandae eum vero numquam quae!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Sık Sorulan Soru #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Soruların cevabını yazabilirsiniz.</strong> Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Esse, eos corrupti! At fugit reprehenderit deleniti non
+                                doloremque saepe repudiandae? Fuga tempore consectetur necessitatibus nihil dignissimos
+                                non amet! Vero, voluptatem culpa.
+                                Corporis voluptatem, facilis esse, laboriosam laudantium quidem tempore itaque impedit
+                                velit hic excepturi dignissimos neque eaque molestiae ipsam, dolorum dolor assumenda?
+                                Illo mollitia, facilis dolor esse ducimus praesentium quod cupiditate.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <a href="#" class="btn btn-primary" id="backTopBtn"> <i class="fas fa-arrow-alt-circle-up    "></i> Yukarı Git</a>
+</main>
+
+    <!-- main end -->
+    <!-- footer start -->
+    <footer id="footer" class="text-white bg-dark">
+        <div class="container">
+            <div class="row">
+                <!-- sol taraf -->
+                <div class="col-md-4 text-start mt-5">
+                    <h5 class="text-muted me-4">Adres</h5>
+                    <address> <i class="fas fa-map-marked    "></i> Adres: Lorem, ipsum dolor sit amet consectetur
+                        adipisicing. <br>
+                        <i class="fas fa-mail-bulk    "></i> E-Posta: <a href="mailto:info@deneme123.com">
+                            info@deneme123.com</a> <br>
+                        <i class="fas fa-phone    "></i> Telefon: <a href="tel:+908508505050"> 0 850 850 50 50</a>
+                    </address>
+                    <address>
+                        <div class="col w-100 clearfix">
+                            <div class="mapouter clearfix">
+                                <div class="gmap_canvas">
+                                    <iframe width="100%" height="300" id="gmap_canvas"
+                                        src="https://maps.google.com/maps?q=istanbul%20&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                    <a href="https://yt2.org">youtube to mp3</a><br>
+                                    <style>
+                                        .mapouter {
+                                            position: relative;
+                                            text-align: right;
+                                            height: 300px;
+                                            width: 100%;
+                                        }
+                                    </style>
+                                    <a href="https://www.embedgooglemap.net">embedded google search</a>
+                                    <style>
+                                        .gmap_canvas {
+                                            overflow: hidden;
+                                            background: none !important;
+                                            height: 300px;
+                                            width: 100%;
+                                        }
+                                    </style>
+                                </div>
+                            </div>
+                        </div>
+                    </address>
+                </div>
+                <!-- orta taraf -->
+                <div class="col-md-4 text-start mt-5">
+                    <h5 class="text-muted me-4">Blog</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam odit dolorem modi labore? Dolor,
+                        esse. Lorem ipsum dolor, sit amet consectetur adipisicing. </p>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                </div>
+                <!-- sağ taraf -->
+                <div class="col-md-4 text-start mt-5">
+                    <h5 class="text-muted  me-4">İletişim</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta neque atque dolores doloremque
+                        expedita suscipit.</p>
+                    <form action="#">
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label class="form-label">Ad</label>
+                                <input type="text" name="firstName" class="form-control" placeholder="Adınız"
+                                    aria-label="First name" required>
+                            </div>
+                            <div class="col">
+                                <label class="form-label">Soyad</label>
+                                <input type="text" name="lastName" class="form-control" placeholder="Soyadınız"
+                                    aria-label="Last name" required>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label class="form-label">Eposta</label>
+                                <input type="email" name="email" class="form-control" placeholder="E-postanız"
+                                    aria-label="Email" required>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label class="form-label">Konu</label>
+                                <input type="text" name="subject" class="form-control" placeholder="Konu"
+                                    aria-label="Subject" required>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label class="form-label">Mesaj</label>
+                                <textarea type="text" name="message" class="form-control" placeholder="Mesajınız"
+                                    aria-label="Message" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success mt-2">Gönder</button>
+                        <button type="reset" class="btn btn-danger mt-2">Temizle</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md m-2 text-center text-muted">
+                    <a href="" class="btn btn-sm btn-primary"> <i class="fab fa-facebook    "></i> Facebook </a>
+                    <a href="" class="btn btn-sm  btn-info text-white"> <i class="fab fa-twitter    "></i> Twitter </a>
+                    <a href="" class="btn btn-sm  btn-danger"> <i class="fab fa-instagram    "></i> Instagram </a>
+                    <a href="" class="btn btn-sm  btn-primary"> <i class="fab fa-linkedin    "></i> Linkedin </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md m-2 text-center text-muted"> <small>2021 &copy; Bütün hakları saklıdır.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- btn_giris -->
+    <!-- div.modal>div.modal-dialog>div.modal-content>(div.modal-header>h5.modal-title{Üye Girişi}+button.btn-close)+(div.modal-body>form>((div.form-group>label+input.form-control)*2+div.checkbox>label+input{Beni Hatırla})+(div.modal-footer>btn.btn+button.btn))-->
+    <!-- User Modal Start-->
+    <div class="modal fade" id="myUye" role="dialog">
+        <div class="modal-dialog modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Üye Girişi</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">                 
+                        <form action="POST">
+                            <div class="form-group">
+                                <label for="email">E-Posta Adresi</label>
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="Lütfen e-postanızı giriniz" aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parola">Parola</label>
+                                <input type="password" class="form-control" id="parola"
+                                    placeholder="Lütfen parolanızı giriniz" required>
+                            </div>
+                            <div class="checkbox pt-2">                                
+                                <input type="checkbox"> Beni Hatırla</input>
+                                
+                            </div>
+                            <div class="modal-footer w-100">
+                                <a href="#" class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#myParolaHatirla"> <i class="fas fa-key    "></i> Parolamı Unuttum</a>
+                                <button type="reset" class="btn btn-danger w-25"> <i class="fas fa-trash-alt    "></i> Temizle</button>
+                                <button type="submit" class="btn btn-success w-25"> <i class="fas fa-sign-in-alt    "></i> Giriş</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- User Modal End-->
+        <!-- btn_kayit -->
+        <!-- Üye Kayıt Ol Start -->
+        <!-- div.modal>div.modal-dialog>div.modal-content>(div.modal-header>h5.modal-title{Kayıt Ol}+button.btn-close)+(div.modal-body>form>((div.form-group>label+input.form-control)*5)+(div.modal-footer>btn.btn+button.btn))-->
+        <div class="modal fade" id="myKayit" role="dialog">
+            <div class="modal-dialog modal-fullscreen-md-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Kayıt Ol</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="kayitForm">
+                            <div class="form-group">
+                                <label for="adi">Adınız</label>
+                                <input type="text" class="form-control" id="adi"
+                                    placeholder="Lütfen adınızı giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="soyadi">Soyadınız</label>
+                                <input type="text" class="form-control" id="soyadi"
+                                    placeholder="Lütfen soyadınızı giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailk">E-Posta Adresi</label>
+                                <input type="email" class="form-control" id="emailk"
+                                    placeholder="Lütfen e-postanızı giriniz" aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parolak">Parola</label>
+                                <input type="password" class="form-control" id="parolak"
+                                    placeholder="Lütfen parolanızı giriniz" required>
+                            </div>  
+                            <div class="form-group">
+                                <label for="parola2">Parola Tekrarı</label>
+                                <input type="password" class="form-control" id="parola2"
+                                    placeholder="Lütfen parolanızı tekrar giriniz" required>
+                            </div>                            
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success"> <i class="fas fa-user-plus    "></i> Kayıt Ol</button>
+                                <button type="reset" class="btn btn-danger"> <i class="fas fa-trash-alt    "></i> Temizle</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Üye Kayıt Ol End -->
+        <!-- Parolamı Unuttum Start -->
+        <div class="modal fade" id="myParolaHatirla" role="dialog">
+            <div class="modal-dialog modal-fullscreen-md-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Parolamı Unuttum</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="POST">
+                            <div class="form-group pb-5">
+                                <label for="emailu">E-Posta Adresi</label>
+                                <input type="email" class="form-control" id="emailu"
+                                    placeholder="Parolanızı yenilemek için e-postanızı giriniz" aria-describedby="emailHelp" required>
+                            </div>                                                       
+                            <div class="modal-footer pb-5">
+                                <button type="reset" class="btn btn-danger"> <i class="fas fa-trash-alt    "></i> Temizle</button>
+                                <button type="submit" class="btn btn-success"> <i class="fas fa-key    "> </i> Parolamı Yenile</button>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Parolamı Unuttum End -->
+        <!-- Sepet Start -->
+        <!-- div.modal>div.modal-dialog>div.modal-content>(div.modal-header>h5.modal-title+button.btn)+div.modal-body -->
+        <div class="modal fade" id="mySepet" role="dialog">
+            <div class="modal-dialog modal-fullscreen-md-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sepet</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 mt-1"><img src="https://via.placeholder.com/60?text=ÜRÜN" class="rounded-circle img-fluid" alt="">                                     
+                                </div>
+                                <div class="col-md-7">
+                                    <p class="mt-2 line-clamp-2 fw-lighter">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, quas.</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <p class="mt-2 line-clamp-2 fw-bold">FİYAT₺</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer pb-1">
+                        <button type="reset" class="btn btn-danger"> <i class="fas fa-trash-alt    "></i> Sepeti Boşalt</button>
+                        <button type="submit" class="btn btn-success"> <i class="fas fa-wallet    "></i> </i> Ödeme Adımına Geç</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sepet End -->
+        <!-- JS -->
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+            </script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+            integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+            <script src="js/main.js"></script>
+</body>
+
+</html>

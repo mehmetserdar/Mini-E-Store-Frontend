@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="" content="" />
+    <meta name="" content="" />
+    <meta name="" content="" />
+    <link rel="icon" href="content/img/favicon.ico">
+    <title>Minimal E-Commerce</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&
+    display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />
+    <style>
+        .ajaxLoadingClass{
+            position: absolute;
+            left: 40%;
+            display: none;
+            
+        }
+        .underScoreColor{
+            color: red;
+        }
+    </style>
+</head>
+
+<body class="container">
+<div class="container">
+    <div class="row">
+        <div class="col-md-10"><input type="text" id="search" class="form-control mt-5 mb-4"> </div>
+        <div class="col-md-2"><i class="fas fa-2x fa-search   mt-5 mb-5 "></i></div>
+    </div>    
+    <ul id="searchUl" class="list-group mb-3" >
+        <li class="list-group-item">html</li>
+        <li class="list-group-item"> css</li>
+        <li class="list-group-item">js</li>
+        <li class="list-group-item">bs</li>
+        <li class="list-group-item">responsive</li>
+    </ul>
+    <button class="btn btn-primary" id="button_id">Gönder</button>
+    <span id="responseAjax"></span>
+</div>
+    
+    <div id="ajaxLoading" class="ajaxLoadingClass"><img src="content/img/loading.gif" alt="">
+    </div>
+        
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+            </script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+            integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+            <script src="js/main.js"></script>
+</body>
+
+</html>

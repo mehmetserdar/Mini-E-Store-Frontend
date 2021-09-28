@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Hamit",
+      "surname": "Mızrak"
+    },
+    {
+      "id": 2,
+      "name": "Hulusi",
+      "surname": "Mızrak"
+    },
+    {
+      "id": 3,
+      "name": "Talha",
+      "surname": "Şekeroğlu"
+    },
+    {
+      "id": 4,
+      "name": "Mustafa",
+      "surname": "Akgeyik"
+    },
+    {
+      "id": "5",
+      "name": "Harun",
+      "surname": "Bayer"
+    },
+    {
+      "id": "6",
+      "name": "DenemeAdi",
+      "surname": "DenemeSoyadi"
+    },
+    {
+      "id": "7",
+      "name": "Emre",
+      "surname": "Aydın"
+    },
+    {
+      "id": "8",
+      "name": "deneme44",
+      "surname": "deneme44"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment 2",
+      "postId": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
